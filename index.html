@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="images/icon.svg">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Дом Пиццы | Корзина</title>
+  </head>
+  <body>
+    <a class="partner-link" href="#"></a>
+    <div class="wrapper">
+      <header class="header">
+        <a class="header__logo" href="/pizzaHouse/">
+          <img class="header__logo-desc" src="images/logoPizzaHouse.svg" alt="ДОМ ПИЦЦЫ">
+          <img class="header__logo-mobile" src="images/logoPizzaHouseMobile.svg" alt="ДОМ ПИЦЦЫ">
+        </a>
+        <div class="header__container">
+          <div class="header__container-info">
+            <div class="container-info-block">
+              <a class="container-info__phone">8 495 226-33-22</a>
+              <div class="container-info__time">
+                <img src="images/headerTimeIcon.svg" alt="">
+                с 10 до 23 ч.
+              </div>
+            </div>
+            <div class="container-info__location" id="location">
+              <span id="location-select-value">Железнодорожный</span>
+              <ul class="location-select" id="location-select">
+                <li class="location-select__list">Железнодорожный</li>
+                <li class="location-select__list">Балашиха</li>
+                <li class="location-select__list">Москва</li>
+                <li class="location-select__list">Истра</li>
+                <li class="location-select__list">Химки</li>
+                <li class="location-select__list">Жуковский</li>
+                <li class="location-select__list">Дзержинский</li>
+                <li class="location-select__list">Долгопрудный</li>
+                <li class="location-select__list">Люберцы</li>
+                <li class="location-select__list">Некрасовка</li>
+              </ul>
+            </div>
+            <a class="container-info__vk-link" href="#">
+              <svg class="container-info__vk" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9161 17C5.47552 17 0.188811 10.5778 0 0H4.72028C4.90909 7.74444 8.30769 11.1444 10.951 11.7111V0H15.2937V6.8C17.9371 6.42222 20.7692 3.4 21.7133 0H26.0559C25.3007 4.15556 22.2797 7.17778 20.014 8.5C22.2797 9.44444 25.6783 12.2778 27 17H22.0909C21.3357 13.7889 18.8811 11.3333 15.2937 10.9556V17H14.9161Z" fill="#E0E0E0"/>
+              </svg>  
+            </a>            
+            <a class="container-info__user">
+              <img src="images/userIcon.svg" alt="">
+              Кабинет
+            </a>
+            <div class="header__burger-menu" id="burger-button">
+              <span class="burger-menu__bar"></span>
+              <span class="burger-menu__bar"></span>
+              <span class="burger-menu__bar"></span>
+            </div>
+            <div class="popup-menu" id="popup-menu">
+              <div class="popup-menu__time">
+                <img src="images/headerTimeIcon.svg" alt="">
+                с 10 до 23 ч.
+              </div>
+              <ul class="popup-menu__container">
+                <li class="popup-menu__list noborder">Пиццы</li>
+                <li class="popup-menu__list noborder">Питы</li>
+                <li class="popup-menu__list noborder">Закуски</li>
+                <li class="popup-menu__list noborder">Супы</li>
+                <li class="popup-menu__list noborder">Напитки</li>
+                <li class="popup-menu__list red noborder">Акции</li>
+                <li class="popup-menu__list dark">Инфо</li>
+                <li class="popup-menu__list dark little">Магазины</li>
+                <li class="popup-menu__list dark little">О нас</li>
+                <li class="popup-menu__list dark little">Оплата и доставка</li>
+                <li class="popup-menu__list dark little">Вакансии</li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__container-navmenu">
+            <ul class="container-nav">
+              <li class="container-nav__list">Пиццы</li>
+              <li class="container-nav__list">Сэндвичи</li>
+              <li class="container-nav__list">Питы</li>
+              <li class="container-nav__list">Закуски</li>
+              <li class="container-nav__list">Хот-доги</li>
+              <li class="container-nav__list share-red">Акции</li>
+              <li class="container-nav__list nav-select">
+                Инфо
+                <ul class="nav-select__block" id="nav-select">
+                  <li class="nav-select__list">Магазины</li>
+                  <li class="nav-select__list">О нас</li>
+                  <li class="nav-select__list">Оплата и доставка</li>
+                  <li class="nav-select__list">Вакансии</li>
+                </ul>
+              </li>              
+            </ul>
+            <a class="header__basket" id="basket-button" href="#">
+              Корзина
+              <span class="header__basket-amount">2</span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="slide__header">Корзина</h1>
+        <div class="basket-flex">
+          <div class="delivery__info delivery__pharagraph">
+            <p>Доставляем с <span>10 до 23 часов.</span></p>
+            <p class="green">Условия доставки и оплаты</p>
+            <p>Бесплатная доставка — при заказе от 600 руб. Иначе — 100 руб.</p>
+          </div>
+          <div class="basket">
+            <div class="basket__container">
+              <div class="basket__card">
+                <img src="images/basket-pizza.png" alt="">
+                <div class="basket__card-column">
+                  <div class="basket-title">Сливочный цыпленок</div>
+                  <div class="basket__card-counter">
+                    <div class="counter">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">1</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                    <div class="counter-title">Лук фри — 20 г, 30 р.</div>
+                  </div>
+                  <div class="basket__card-counter">
+                    <div class="counter">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">3</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                    <div class="counter-title">Огурцы маринованные — 30 г, 30 р.</div>
+                  </div>
+                  <div class="basket__card-counter">
+                    <div class="counter">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">1</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                    <div class="counter-title">Курица — 30 г, 50 р.</div>
+                  </div>
+                </div>
+                <div class="basket__center">
+                  <div class="basket__char">
+                    36 см
+                  </div>
+                  <div class="basket__card-counter">
+                    <div class="counter dark">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">1</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                  </div>
+                  <div class="basket-title">790 &#8381;</div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__container">
+              <div class="basket__card">
+                <img src="images/basket-pizza.png" alt="">
+                <div class="basket__card-column">
+                  <div class="basket-title">Сливочный цыпленок</div>
+                  <div class="basket__card-counter">
+                    <div class="counter">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">1</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                    <div class="counter-title">Лук фри — 20 г, 30 р.</div>
+                  </div>
+                  <div class="basket__card-counter">
+                    <div class="counter">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">3</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                    <div class="counter-title">Огурцы маринованные — 30 г, 30 р.</div>
+                  </div>
+                  <div class="basket__card-counter">
+                    <div class="counter">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">1</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                    <div class="counter-title">Курица — 30 г, 50 р.</div>
+                  </div>
+                </div>
+                <div class="basket__center">
+                  <div class="basket__char">
+                    36 см
+                  </div>
+                  <div class="basket__card-counter">
+                    <div class="counter dark">
+                      <div class="counter__inc">-</div>
+                      <div class="counter__value">1</div>
+                      <div class="counter__inc">+</div>
+                    </div>
+                  </div>
+                  <div class="basket-title">790 &#8381;</div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__container">
+              <h2 class="menu__header">Оформить заказ</h2>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__space"></div>
+          <div class="footer__flex">
+            <div class="footer__phone-time">
+              <div class="footer__worktime">Ежедневно, с 10 до 23 ч.</div>
+              <a class="footer__phone">8 495 226-33-22</a>  
+              <p class="footer__delivery">Бесплатная доставка при заказе на сумму от 600 рублей</p>
+            </div>
+            <ul class="footer__menu">
+              <li class="footer__menu-list-header">Меню</li>
+              <li class="footer__menu-list">Пиццы</li>
+              <li class="footer__menu-list">Сэндвичи</li>
+              <li class="footer__menu-list">Питы</li>
+              <li class="footer__menu-list">Закуски</li>
+              <li class="footer__menu-list">Супы</li>
+            </ul>
+            <ul class="footer__info">
+              <li class="footer__menu-list-header">Инфо</li>
+              <li class="footer__menu-list">«Дом-пиццы» на карте</li>
+              <li class="footer__menu-list">Оплата и доставка</li>
+              <li class="footer__menu-list">О компании</li>
+              <li class="footer__menu-list">Вакансии</li>
+              <li class="footer__menu-list">Акции и скидки</li>
+            </ul>
+          </div>
+          <a class="footer__vk" href="#">
+            <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.8881 22C7.3007 22 0.251748 13.6889 0 0H6.29371C6.54545 10.0222 11.0769 14.4222 14.6014 15.1556V0H20.3916V8.8C23.9161 8.31111 27.6923 4.4 28.951 0H34.7413C33.7343 5.37778 29.7063 9.28889 26.6853 11C29.7063 12.2222 34.2378 15.8889 36 22H29.4545C28.4476 17.8444 25.1748 14.6667 20.3916 14.1778V22H19.8881Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__top-whitespace"></div>
+        <div class="footer__bottom-whitespace">
+          <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+          <div class="footer__date">&copy; 2016-2023</div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-wrapper" id="modal-register">
+      <div class="modal">
+        <img class="modal__close-button" src="images/modalClose.svg" alt="">
+
+      </div>
+    </div>
+    <div class="modal-wrapper" id="modal-login">
+      <div class="modal">
+        <img class="modal__close-button" src="images/modalClose.svg" alt="">
+        
+      </div>
+    </div>
+    <div class="modal-wrapper" id="modal-constructor">
+      <div class="modal">
+        <img class="modal__close-button" src="images/modalClose.svg" alt="">
+        
+      </div>
+    </div>
+    <div class="modal-wrapper" id="modal-ingredients">
+      <div class="modal">
+        <img class="modal__close-button" src="images/modalClose.svg" alt="">
+        
+      </div>
+    </div>
+  <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
