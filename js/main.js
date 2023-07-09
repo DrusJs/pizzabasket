@@ -58,4 +58,28 @@ locationOptions.forEach(el => {
    });
 });
 
+function setActionModal() {
+    document.querySelector(".container-info__user").addEventListener("click", () => {
+        document.getElementById("modal-login").classList.add("active");
+    });
+    document.querySelector(".modal__link.login").addEventListener("click", () => {
+        document.querySelector(".modal-wrapper.active").classList.remove("active");
+        document.getElementById("modal-login").classList.add("active");
+    });
+    document.querySelector(".modal__link.register").addEventListener("click", () => {
+        document.querySelector(".modal-wrapper.active").classList.remove("active");
+        document.getElementById("modal-register").classList.add("active");
+    });
+    document.querySelector(".modal__link.remind").addEventListener("click", () => {
+        document.querySelector(".modal-wrapper.active").classList.remove("active");
+        document.getElementById("modal-remind").classList.add("active");
+    });
+    document.querySelectorAll(".reset-btn").forEach(el => {
+        el.addEventListener("click", () => {
+            document.querySelector(".modal-wrapper.active").classList.remove("active");
+        });
+    });
+}
+
+setActionModal();
 //basket
