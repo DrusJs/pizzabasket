@@ -764,7 +764,7 @@ body {
 .card-pizza_cart-btn:hover {
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
-    background-image: linear-gradient(90deg, rgba(244,123,32,1) 0%, rgba(255,209,0,1) 100%);;
+    background-image: linear-gradient(90deg, rgba(244,123,32,1) 0%, rgba(255,209,0,1) 100%);
 }
 .greencard__container {
     display: flex;
@@ -1059,6 +1059,94 @@ body {
     margin-left: 44px;
 }
 /**************************************/
+/*****************pita.html*********************/
+.offer__container {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    max-width: 1720px;
+    height: 266px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    background-image: linear-gradient(90deg, rgba(244,123,32,1) 0%, rgba(255,209,0,1) 100%);;
+}
+.offer__whitespace {
+    width: 355px;
+    height: 63px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    font-size: 36px;
+    line-height: 40px;
+    color: var(--color-dark-grey);
+    border-radius: 0 0 20px 0;
+}
+.offer__whitespace::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px 0 0 0;
+    -webkit-box-shadow: -10px -10px 0px 5px #FFFFFF;
+    -moz-box-shadow: -10px -10px 0px 5px #FFFFFF;
+    box-shadow: -10px -10px 0px 5px #FFFFFF;
+}
+.offer__whitespace::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px 0 0 0;
+    -webkit-box-shadow: -10px -10px 0px 5px #FFFFFF;
+    -moz-box-shadow: -10px -10px 0px 5px #FFFFFF;
+    box-shadow: -10px -10px 0px 5px #FFFFFF;
+}
+.offers {
+    position: relative;
+    top: 96px;
+    padding: 0 0 0 380px;
+    height: 123px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    flex-wrap: wrap;
+}
+/**************************************/
+/*****************delivery.html*********************/
+.yandex-maps {
+    height: 442px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-image: url(../images/map.png);
+    background-position: center;
+}
+.yandex-maps__space {
+    height: 442px;
+    width: 100%;
+}
+.yandex-top {
+    padding: 0 0 40px 0;
+}
+.delivery__text-block {
+    font-family: CRRegular5;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    margin-top: 60px;
+    gap: 10px;
+}
+.margin-left {
+    margin-left: 355px;
+  }
+/**************************************/
 .footer {
     width: 100%;
     min-height: 321px;
@@ -1280,6 +1368,9 @@ body {
   .slide__header.margin-left {
     margin-left: 0;
   }
+  .margin-left {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 1250px) {
     .header__basket {
@@ -1357,6 +1448,9 @@ body {
     .pagination__arrow-next {
         display: none;
     }
+    .offers {
+        padding: 0 20% 0 20%;
+    }
     .footer__flex {
         width: 226px;
     }
@@ -1424,6 +1518,15 @@ body {
     .delivery__container {
         flex-direction: column;
         gap: 40px;
+    }
+    .delivery__text-block {
+        font-family: CRRegular5;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+        margin-top: 60px;
+        gap: 10px;
     }
 }
 
