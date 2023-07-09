@@ -32,9 +32,9 @@ modalCloseButtons.forEach(el => {
     });
 });
 
-document.getElementById("basket-button").addEventListener("click", () => {
-    document.getElementById("modal-register").classList.add("active");
-});
+// document.getElementById("basket-button").addEventListener("click", () => {
+//     document.getElementById("modal-register").classList.add("active");
+// });
 
 // locationBlock.addEventListener("click", () => {
 //     locationSelect.classList.toggle("active");
