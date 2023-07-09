@@ -180,7 +180,8 @@ body {
     overflow-y: visible;
     overflow-x: hidden;
     padding: 5px 0;
-    scrollbar-width: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .location-select.active {
     display: block;
@@ -430,6 +431,9 @@ body {
 .main {
     width: 100%;
     flex: 1 1 auto;
+    padding: 96px 0 0 0;
+}
+.main.high {
     padding: 35px 0 0 0;
 }
 .slider__container {
@@ -889,9 +893,13 @@ body {
 }
 /******************basket.html********************/
 .delivery__info {
-    width: 311px;
+    width: 300px;
+    min-width: 300px;
     gap: 10px;    
     padding: 10px 0 0 0;
+}
+.slide__header.margin-left {
+    margin-left: 355px;
 }
 .delivery__info .green {
     color: var(--color-green);
@@ -906,13 +914,13 @@ body {
 .basket {
     max-width: 1011px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 
 }
 .basket__container {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
 }
 .checkout__container {
     position: relative;
@@ -923,10 +931,17 @@ body {
     height: 170px;
     background-color: #FFFFFF;
     border-radius: 50px;
-    padding: 12px 14px;
+    padding: 12px 40px 12px 14px;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
     display: flex;
-    gap: 21px;
+    white-space: nowrap;
+}
+.basket__card-img {
+    margin-right: 21px;
+}
+.basket__card.center {
+    align-items: center;
+    justify-content: flex-start;
 }
 .basket__card-column {
     display: flex;
@@ -938,33 +953,44 @@ body {
     gap: 7px;
 }
 .basket-title {
+    min-width: 345px;
     color: #3E595F;
     font-family: CRRegular4;
     font-size: 23px;
     font-weight: 400;
     white-space: nowrap;
 }
+.basket__price {
+    color: #3E595F;
+    font-family: CRRegular4;
+    font-size: 23px;
+    font-weight: 400;
+    white-space: nowrap;
+    margin-left: 30px;
+}
 .basket__center {
     display: flex;
     align-items: center;
     height: 35px;
-    gap: 30px;
 }
 .counter {
     width: 65px;
+    min-width: 65px;
     height: 20px;
-    background-color: var(--color-green);
+    background-color: var(--color-green);    
+    border-top: 1px solid var(--color-green);
+    border-bottom: 1px solid var(--color-green);
     color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 20px;
-    padding: 1px;
 }
 .counter__inc {
-    width: 18px;
-    height: 18px;
-    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;    
+    border: 1px solid var(--color-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -972,14 +998,19 @@ body {
     background-color: #FFFFFF;
     cursor: pointer;
 }
+.counter__inc.plus {
+    padding-top: 3px;
+}
 .counter__value {
     font-size: 14px;
 }
 .counter.dark {
     width: 114px;
+    min-width: 114px;
     height: 35px;
     background-color: var(--color-dark-grey);
-    border: 1px solid #ACC7CD;
+    border-top: 1px solid #ACC7CD;
+    border-bottom: 1px solid #ACC7CD;
     color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -1000,6 +1031,9 @@ body {
     background-color: #FFFFFF;
     cursor: pointer;
 }
+.counter.dark .counter__inc.plus {
+    padding-top: 3px;
+}
 .counter.dark .counter__value {
     font-size: 23px;
 }
@@ -1008,7 +1042,21 @@ body {
 }
 .basket__char {
     font-family: CRRegular5;
-    margin: 5px 70px 0 60px;
+    margin: 5px 0 0 0;
+    min-width: 220px;
+    padding-left: 50px;
+}
+.basket__total-price {
+    font-size: 23px;
+    font-family: CRRegular4;
+    color: var(--color-dark-grey);
+    margin-right: 40px;
+}
+.basket__total-price .green {
+    font-size: 32px;
+    font-family: CRRegular4;
+    color: var(--color-green);
+    margin-left: 44px;
 }
 /**************************************/
 .footer {
@@ -1225,6 +1273,12 @@ body {
   }
   .footer__flex {
     flex-wrap: wrap;
+  }
+  .basket-flex {
+    flex-direction: column;
+  }
+  .slide__header.margin-left {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 1250px) {
