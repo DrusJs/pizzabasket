@@ -223,34 +223,35 @@
   
                   <div class="checkout__row checkout__row-adress">
                       <p class="reg-label reg-label__city">Ваш город *</p>
-    
-                      <div class="checkout__row-city">
-                          <input class="input__radio" type="radio" id="reg-jel" name="city">
-                          <label class="reg-label__radio" for="reg-jel">Железнодорожный</label>
-                          <input class="input__radio" type="radio" id="reg-bal" name="city">
-                          <label class="reg-label__radio" for="reg-bal">Балашиха</label>
-                          <input class="input__radio" type="radio" id="reg-mos" name="city">
-                          <label class="reg-label__radio" for="reg-mos">Москва</label><br>
-                          <input class="input__radio" type="radio" id="reg-him" name="city">
-                          <label class="reg-label__radio" for="reg-him">Химки</label>
-                          <input class="input__radio" type="radio" id="reg-zhuk" name="city">
-                          <label class="reg-label__radio" for="reg-zhuk">Жуковский</label>
-                          <input class="input__radio" type="radio" id="reg-dzer" name="city">
-                          <label class="reg-label__radio" for="reg-dzer">Дзержинский</label><br>
-                          <input class="input__radio" type="radio" id="reg-dolg" name="city">
-                          <label class="reg-label__radio" for="reg-dolg">Долгопрудный</label>
-                          <input class="input__radio" type="radio" id="reg-lub" name="city">
-                          <label class="reg-label__radio" for="reg-lub">Люберцы</label>
-                          <input class="input__radio" type="radio" id="reg-zhul" name="city">
-                          <label class="reg-label__radio" for="reg-zhul">Жулебино</label><br>
-                          <input class="input__radio" type="radio" id="reg-nek" name="city">
-                          <label class="reg-label__radio" for="reg-nek">Некрасовка</label>
-                      </div>
+                      <fieldset>
+                        <div class="checkout__row-city">
+                            <input class="input__radio" type="radio" id="basket-jel" name="city">
+                            <label class="reg-label__radio" for="basket-jel">Железнодорожный</label>
+                            <input class="input__radio" type="radio" id="basket-bal" name="city">
+                            <label class="reg-label__radio" for="basket-bal">Балашиха</label>
+                            <input class="input__radio" type="radio" id="basket-mos" name="city">
+                            <label class="reg-label__radio" for="basket-mos">Москва</label><br>
+                            <input class="input__radio" type="radio" id="basket-him" name="city">
+                            <label class="reg-label__radio" for="basket-him">Химки</label>
+                            <input class="input__radio" type="radio" id="basket-zhuk" name="city">
+                            <label class="reg-label__radio" for="basket-zhuk">Жуковский</label>
+                            <input class="input__radio" type="radio" id="basket-dzer" name="city">
+                            <label class="reg-label__radio" for="basket-dzer">Дзержинский</label><br>
+                            <input class="input__radio" type="radio" id="basket-dolg" name="city">
+                            <label class="reg-label__radio" for="basket-dolg">Долгопрудный</label>
+                            <input class="input__radio" type="radio" id="basket-lub" name="city">
+                            <label class="reg-label__radio" for="basket-lub">Люберцы</label>
+                            <input class="input__radio" type="radio" id="basket-zhul" name="city">
+                            <label class="reg-label__radio" for="basket-zhul">Жулебино</label><br>
+                            <input class="input__radio" type="radio" id="basket-nek" name="city">
+                            <label class="reg-label__radio" for="basket-nek">Некрасовка</label>
+                        </div>
+                    </fieldset>
                   </div>
 
                   <div class="checkout__row checkbox">
-                    <label class="reg-label" for="reg-email">Самовывоз</label>
-                    <input class="checbox-termofuse" type="checkbox" id="reg-termofuse">
+                    <label class="reg-label" for="delivery">Самовывоз</label>
+                    <input class="checkbox checbox-termofuse" type="checkbox" id="delivery">
                   </div>
     
                   <div class="checkout__row checkout__row-adress">
@@ -270,16 +271,16 @@
                     <p class="reg-label reg-label__city">Оплата</p>  
                     <div class="checkout__row-column">
                         <div class="checkrow">
-                        <input class="input__radio" type="radio" id="reg-jel" name="city">
-                        <label class="reg-label__radio" for="reg-jel">Оплата картой курьеру</label>
+                        <input class="input__radio" type="radio" id="reg-card" name="price">
+                        <label class="reg-label__radio" for="reg-card">Оплата картой курьеру</label>
                         </div>
                         <div class="checkrow">
-                        <input class="input__radio" type="radio" id="reg-bal" name="city">
-                        <label class="reg-label__radio" for="reg-bal">Оплата наличными курьеру</label>
+                        <input class="input__radio" type="radio" id="reg-nal" name="price">
+                        <label class="reg-label__radio" for="reg-nal">Оплата наличными курьеру</label>
                         </div>
                         <div class="checkrow">
-                          <input class="input__radio" type="radio" id="reg-mos" name="city">
-                          <label class="reg-label__radio" for="reg-mos">Оплата онлайн</label>
+                          <input class="input__radio" type="radio" id="reg-online" name="price">
+                          <label class="reg-label__radio" for="reg-online">Оплата онлайн</label>
                           <input class="input__text input-reg__mail" type="email"  placeholder="Электронная почта">
                           <p class="message">ссылку для оплаты вышлет оператор после уточнения заказа</p>
                         </div>
@@ -291,8 +292,8 @@
                         <p class="reg-label reg-label__city">Комментарий к заказу</p>  
                         <div class="block">
                           <textarea class="textarea" name="" id="" cols="20" rows="4" placeholder="Улица"></textarea><br>
-                          <input class="checbox-termofuse" type="checkbox" id="reg-termofuse">
-                          <p class="modal__desc reg-desc">Соглашаюсь с <a class="modal__link reg-link">Условиями</a> обработки персональных данных</p>
+                          <input class="checkbox checbox-termofuse" type="checkbox" id="termofuse">
+                          <label for="termofuse" class="modal__desc reg-desc">Соглашаюсь с <a class="modal__link reg-link">Условиями</a> обработки персональных данных</label>
                         </div>
                   </div>
     
@@ -372,25 +373,25 @@
                   <p class="reg-label reg-label__city">Ваш город *</p>
 
                   <div class="modal-reg__row-city">
-                      <input class="input__radio" type="radio" id="reg-jel" name="city">
+                      <input class="input__radio" type="radio" id="reg-jel" name="modal-city">
                       <label class="reg-label__radio" for="reg-jel">Железнодорожный</label>
-                      <input class="input__radio" type="radio" id="reg-bal" name="city">
+                      <input class="input__radio" type="radio" id="reg-bal" name="modal-city">
                       <label class="reg-label__radio" for="reg-bal">Балашиха</label>
-                      <input class="input__radio" type="radio" id="reg-mos" name="city">
+                      <input class="input__radio" type="radio" id="reg-mos" name="modal-city">
                       <label class="reg-label__radio" for="reg-mos">Москва</label>
-                      <input class="input__radio" type="radio" id="reg-him" name="city">
+                      <input class="input__radio" type="radio" id="reg-him" name="modal-city">
                       <label class="reg-label__radio" for="reg-him">Химки</label><br>
-                      <input class="input__radio" type="radio" id="reg-zhuk" name="city">
+                      <input class="input__radio" type="radio" id="reg-zhuk" name="modal-city">
                       <label class="reg-label__radio" for="reg-zhuk">Жуковский</label>
-                      <input class="input__radio" type="radio" id="reg-dzer" name="city">
+                      <input class="input__radio" type="radio" id="reg-dzer" name="modal-city">
                       <label class="reg-label__radio" for="reg-dzer">Дзержинский</label><br>
-                      <input class="input__radio" type="radio" id="reg-dolg" name="city">
+                      <input class="input__radio" type="radio" id="reg-dolg" name="modal-city">
                       <label class="reg-label__radio" for="reg-dolg">Долгопрудный</label>
-                      <input class="input__radio" type="radio" id="reg-lub" name="city">
+                      <input class="input__radio" type="radio" id="reg-lub" name="modal-city">
                       <label class="reg-label__radio" for="reg-lub">Люберцы</label><br>
-                      <input class="input__radio" type="radio" id="reg-zhul" name="city">
+                      <input class="input__radio" type="radio" id="reg-zhul" name="modal-city">
                       <label class="reg-label__radio" for="reg-zhul">Жулебино</label>
-                      <input class="input__radio" type="radio" id="reg-nek" name="city">
+                      <input class="input__radio" type="radio" id="reg-nek" name="modal-city">
                       <label class="reg-label__radio" for="reg-nek">Некрасовка</label>
                   </div>
               </div>
