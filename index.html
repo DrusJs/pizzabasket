@@ -7,7 +7,7 @@
     <link rel="icon" href="images/icon.svg">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Дом Пиццы | Главная</title>
+    <title>Дом Пиццы | Корзина</title>
   </head>
   <body>
     <a class="partner-link" href="#"></a>
@@ -26,19 +26,21 @@
                 с 10 до 23 ч.
               </div>
             </div>
-            <div class="container-info__location" id="location">
-              <span id="location-select-value">Железнодорожный</span>
-              <div class="location-select" id="location-select">
-                <a class="location-select__list">Железнодорожный</a>
-                <a class="location-select__list">Балашиха</a>
-                <a class="location-select__list">Москва</a>
-                <a class="location-select__list">Истра</a>
-                <a class="location-select__list">Химки</a>
-                <a class="location-select__list">Жуковский</a>
-                <a class="location-select__list">Дзержинский</a>
-                <a class="location-select__list">Долгопрудный</a>
-                <a class="location-select__list">Люберцы</a>
-                <a class="location-select__list">Некрасовка</a>
+            <div class="container-info__fix">
+              <div class="container-info__location" id="location">
+                <span id="location-select-value">Железнодорожный</span>
+                <div class="location-select" id="location-select">
+                  <a class="location-select__list">Железнодорожный</a>
+                  <a class="location-select__list">Балашиха</a>
+                  <a class="location-select__list">Москва</a>
+                  <a class="location-select__list">Истра</a>
+                  <a class="location-select__list">Химки</a>
+                  <a class="location-select__list">Жуковский</a>
+                  <a class="location-select__list">Дзержинский</a>
+                  <a class="location-select__list">Долгопрудный</a>
+                  <a class="location-select__list">Люберцы</a>
+                  <a class="location-select__list">Некрасовка</a>
+                </div>
               </div>
             </div>
             <a class="container-info__vk-link" href="#">
@@ -61,35 +63,35 @@
                 с 10 до 23 ч.
               </div>
               <ul class="popup-menu__container">
-                <a class="popup-menu__list noborder">Пиццы</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Пиццы</a>
                 <a class="popup-menu__list noborder" href="/pizzaPita">Питы</a>
-                <a class="popup-menu__list noborder">Закуски</a>
-                <a class="popup-menu__list noborder">Супы</a>
-                <a class="popup-menu__list noborder">Напитки</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Закуски</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Супы</a>
+                <a class="popup-menu__list noborder" href="/pizzaPita">Напитки</a>
                 <a class="popup-menu__list red noborder">Акции</a>
                 <a class="popup-menu__list dark">Инфо</a>
-                <a class="popup-menu__list dark little">Магазины</a>
-                <a class="popup-menu__list dark little">О нас</a>
+                <a class="popup-menu__list dark little" href="/pizzaDelivery">Магазины</a>
+                <a class="popup-menu__list dark little" href="/pizzaDelivery">О нас</a>
                 <a class="popup-menu__list dark little" href="/pizzaDelivery">Оплата и доставка</a>
-                <a class="popup-menu__list dark little">Вакансии</a>
+                <a class="popup-menu__list dark little" href="/pizzaDelivery">Вакансии</a>
               </ul>
             </div>
           </div>
           <div class="header__container-navmenu">
             <ul class="container-nav">
-              <a class="container-nav__list">Пиццы</a>
-              <a class="container-nav__list">Сэндвичи</a>
+              <a class="container-nav__list" href="/pizzaPita">Пиццы</a>
+              <a class="container-nav__list" href="/pizzaPita">Сэндвичи</a>
               <a class="container-nav__list" href="/pizzaPita">Питы</a>
-              <a class="container-nav__list">Закуски</a>
-              <a class="container-nav__list">Хот-доги</a>
+              <a class="container-nav__list" href="/pizzaPita">Закуски</a>
+              <a class="container-nav__list" href="/pizzaPita">Хот-доги</a>
               <a class="container-nav__list share-red">Акции</a>
               <a class="container-nav__list nav-select">
                 Инфо
                 <ul class="nav-select__block" id="nav-select">
-                  <a class="nav-select__list">Магазины</a>
-                  <a class="nav-select__list">О нас</a>
+                  <a class="nav-select__list" href="/pizzaDelivery">Магазины</a>
+                  <a class="nav-select__list" href="/pizzaDelivery">О нас</a>
                   <a class="nav-select__list" href="/pizzaDelivery">Оплата и доставка</a>
-                  <a class="nav-select__list">Вакансии</a>
+                  <a class="nav-select__list" href="/pizzaDelivery">Вакансии</a>
                 </ul>
               </a>              
             </ul>
@@ -206,6 +208,99 @@
             </div>
             <div class="checkout__container">
               <h2 class="menu__header">Оформить заказ</h2>
+                <form class="checkout-form" action="">
+
+                  <div class="checkout__row">
+                      <label class="reg-label" for="reg-name">Ваше имя *</label>
+                      <input class="input__text" type="text" id="reg-name">
+                  </div>
+    
+                  <div class="checkout__row">
+                      <label class="reg-label" for="reg-number">Телефон *</label>
+                      <input class="input__text reg-input__number" type="text" value="+7 (___) ___-__-__" id="reg-number">
+                  </div>
+                  <div class="section-row__dotted"></div>
+  
+                  <div class="checkout__row checkout__row-adress">
+                      <p class="reg-label reg-label__city">Ваш город *</p>
+    
+                      <div class="checkout__row-city">
+                          <input class="input__radio" type="radio" id="reg-jel" name="city">
+                          <label class="reg-label__radio" for="reg-jel">Железнодорожный</label>
+                          <input class="input__radio" type="radio" id="reg-bal" name="city">
+                          <label class="reg-label__radio" for="reg-bal">Балашиха</label>
+                          <input class="input__radio" type="radio" id="reg-mos" name="city">
+                          <label class="reg-label__radio" for="reg-mos">Москва</label><br>
+                          <input class="input__radio" type="radio" id="reg-him" name="city">
+                          <label class="reg-label__radio" for="reg-him">Химки</label>
+                          <input class="input__radio" type="radio" id="reg-zhuk" name="city">
+                          <label class="reg-label__radio" for="reg-zhuk">Жуковский</label>
+                          <input class="input__radio" type="radio" id="reg-dzer" name="city">
+                          <label class="reg-label__radio" for="reg-dzer">Дзержинский</label><br>
+                          <input class="input__radio" type="radio" id="reg-dolg" name="city">
+                          <label class="reg-label__radio" for="reg-dolg">Долгопрудный</label>
+                          <input class="input__radio" type="radio" id="reg-lub" name="city">
+                          <label class="reg-label__radio" for="reg-lub">Люберцы</label>
+                          <input class="input__radio" type="radio" id="reg-zhul" name="city">
+                          <label class="reg-label__radio" for="reg-zhul">Жулебино</label><br>
+                          <input class="input__radio" type="radio" id="reg-nek" name="city">
+                          <label class="reg-label__radio" for="reg-nek">Некрасовка</label>
+                      </div>
+                  </div>
+
+                  <div class="checkout__row checkbox">
+                    <label class="reg-label" for="reg-email">Самовывоз</label>
+                    <input class="checbox-termofuse" type="checkbox" id="reg-termofuse">
+                  </div>
+    
+                  <div class="checkout__row checkout__row-adress">
+                      <p class="reg-label">Адрес *</p>
+    
+                      <div class="adress-block">
+                          <input class="input__text input-reg__street" type="text" id="reg-address" placeholder="Улица">
+                          <input class="input__text input-reg__house" type="text"  placeholder="Дом"><br>
+                          <input class="input__text input-reg__door" type="text"  placeholder="Подъезд">
+                          <input class="input__text input-reg__floor" type="text"  placeholder="Этаж">
+                          <input class="input__text input-reg__flat" type="text" placeholder="Квартира">
+                      </div>
+                  </div>
+
+                  <div class="section-row__dotted"></div>
+                  <div class="checkout__row checkout__row-adress">
+                    <p class="reg-label reg-label__city">Оплата</p>  
+                    <div class="checkout__row-column">
+                        <div class="checkrow">
+                        <input class="input__radio" type="radio" id="reg-jel" name="city">
+                        <label class="reg-label__radio" for="reg-jel">Оплата картой курьеру</label>
+                        </div>
+                        <div class="checkrow">
+                        <input class="input__radio" type="radio" id="reg-bal" name="city">
+                        <label class="reg-label__radio" for="reg-bal">Оплата наличными курьеру</label>
+                        </div>
+                        <div class="checkrow">
+                          <input class="input__radio" type="radio" id="reg-mos" name="city">
+                          <label class="reg-label__radio" for="reg-mos">Оплата онлайн</label>
+                          <input class="input__text input-reg__mail" type="email"  placeholder="Электронная почта">
+                          <p class="message">ссылку для оплаты вышлет оператор после уточнения заказа</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="section-row__dotted margin-top"></div>
+    
+                  <div class="checkout__row checkout__row-adress margin-top">
+                        <p class="reg-label reg-label__city">Комментарий к заказу</p>  
+                        <div class="block">
+                          <textarea class="textarea" name="" id="" cols="20" rows="4" placeholder="Улица"></textarea><br>
+                          <input class="checbox-termofuse" type="checkbox" id="reg-termofuse">
+                          <p class="modal__desc reg-desc">Соглашаюсь с <a class="modal__link reg-link">Условиями</a> обработки персональных данных</p>
+                        </div>
+                  </div>
+    
+                  <div class="form__complete-block reg-complete-block">
+                      <input type="submit" class="sumbit-btn" value="ОТПРАВИТЬ">
+                  </div>
+                  
+              </form>
             </div>
           </div>
         </div>
