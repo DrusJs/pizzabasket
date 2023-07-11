@@ -9,6 +9,30 @@ const locationSelect = document.getElementById("location-select");
 const locationField = document.getElementById("location-select-value");
 const locationOptions = document.querySelectorAll(".location-select__list");
 
+
+const navBlock = document.getElementById("nav");
+const navSelect = document.getElementById("nav-select");
+const navOptions = document.querySelectorAll(".nav-select__list");
+
+navBlock.addEventListener("mouseover", () => {
+    navSelect.classList.add("active");
+});
+navSelect.addEventListener("mouseover", () => {
+    navSelect.classList.add("active");
+});
+navBlock.addEventListener("mouseout", () => {
+    navSelect.classList.remove("active");
+});
+navSelect.addEventListener("mouseout", () => {
+    navSelect.classList.remove("active");
+});
+navOptions.forEach(el => {
+   el.addEventListener("click", (e) => {
+        navField.innerHTML = e.currentTarget.innerHTML;
+        navSelect.classList.remove("active");
+   });
+});
+
 burgerButton.addEventListener("click", ()=>{
     burgerButton.classList.toggle("active");
     if (burgerButton.classList.contains("active")) {
@@ -122,3 +146,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 //basket
+
+function setBascketCardAction() {
+    document.querySelectorAll(".dark .counter__inc.plus").forEach(el => {
+        el.addEventListener("click", (e) => {
+            let multy = e.currentTarget.previousElementSibling.innerHTML;
+            e.currentTarget.previousElementSibling.innerHTML = +multy+1;
+        });
+    });
+    document.querySelectorAll(".dark .counter__inc.minus").forEach(el => {
+        el.addEventListener("click", (e) => {
+            let multy = e.currentTarget.nextElementSibling.innerHTML;
+            if (+multy < 2){
+                let block = e.currentTarget.parentElement.parentElement.parentElement;
+                if (block.parentElement.classList.contains("basket__card")) {
+                    block.parentElement.remove();
+                    return;
+                }
+                if (e.currentTarget.parentElement.parentElement.parentElement.classList.contains("basket__card")) {
+                    block.remove();
+                }
+            } else {
+                e.currentTarget.nextElementSibling.innerHTML = +multy-1;
+            }
+        });
+    });
+}
+setBascketCardAction()
