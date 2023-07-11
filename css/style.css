@@ -75,6 +75,7 @@ html,
 body {
     height: 100%;
     background-color: #FCFCFC;
+    overflow-x: hidden;
 }
 body.noscroll {
 	overflow: hidden;
@@ -99,7 +100,7 @@ body.noscroll {
     position: fixed;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     width: 100%;
     border-radius: 20px 20px 0 0;
     background-color: #FFFFFF;
@@ -145,6 +146,7 @@ body.noscroll {
     padding: 30px 100px;
     font-family: CRRegular4;
     color: var(--color-dark-grey);
+    position: relative;
 }
 .header {
     width: 100%;
@@ -152,6 +154,7 @@ body.noscroll {
     gap: 15px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .header__logo {
     margin: 30px 0 0 0;
@@ -2592,6 +2595,9 @@ body.noscroll {
 @media screen and (max-width: 750px) {
     .header__container {
         min-width: 300px;
+    }
+    .mobile-menu {
+        display: flex;
     }
     .menu__main {
         gap: 10px;
