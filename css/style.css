@@ -59,6 +59,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 a,
 a:hover,
@@ -537,7 +538,8 @@ body.noscroll {
     position: relative;
     display: flex;
     overflow: hidden;
-    transition: 500ms;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 30px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -554,23 +556,29 @@ body.noscroll {
     left: 0;
 }
 .slider__slide {
+    scroll-snap-align: start;
     width: 100%;
-    max-width: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
+    transform: translate(-1600px,0px);
     opacity: 0;
-    transition: 500ms;
+    transition: 600ms;
     background-color: #FCFCFC;
 }
 .slider__slide.active {
-    left: 0;
+    transform: translate(0px,0px);
     max-width: 100%;
     opacity: 1;
+}
+.slider__slide.right {
+    transform: translate(1600px,0px);
+    max-width: 100%;
+    opacity: 0;
 }
 .slide__description {
     display: flex;
@@ -739,17 +747,33 @@ body.noscroll {
     gap: 50px;
     padding: 85px 0 30px 0;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 600px;
 }
 .novelty-slider {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
     width: 975px;
+    top: 30px;
     padding: 0 20px 20px 20px;
-    overflow-x: hidden;
-}
+    overflow: hidden;
+    height: 600px;
 
+}
+.novelty-slide {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transform: translate(-1000px, 0);
+    transition: 500ms;
+}
+.novelty-slide.active {
+    opacity: 1;
+    transform: translate(0px, 0);
+}
 .novelty-pages {
     position: absolute;
     bottom: 0px;
@@ -988,8 +1012,8 @@ body.noscroll {
     min-width: 140px;
     background-color: var(--color-green);
     color: #FFFFFF;
-    border-top: 1px solid var(--color-light-grey);
-    border-bottom: 1px solid var(--color-light-grey);
+    border-left: 0;
+    border-right: 0;
     cursor: default;
     padding: 0;
     margin-left: -20px;
@@ -997,7 +1021,8 @@ body.noscroll {
 .card-pizza_cart-btn.item-card__btn.active:hover {
     background-color: var(--color-green);
     color: #FFFFFF;
-    border: 1px solid var(--color-light-grey);
+    border-left: 0;
+    border-right: 0;
     background-image: none;
 }
 .greencard__container {
@@ -2508,13 +2533,45 @@ body.noscroll {
         margin-left: 205px;
         gap: 10px;
     }
+    .menu__container {
+        margin-top: 30px;
+        position: relative;
+        min-height: 650px;
+      }
+      .menu__novelty {
+        width: calc(100% + 60px);
+        height: 600px;
+        overflow: hidden;
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
     .novelty-slider {
         display: flex;
         justify-content: flex-start;
         gap: 20px;
-        width: 650px;
-        padding-bottom: 20px;
-        overflow-x: hidden;
+        height: 600px;
+        width: calc(100% + 60px);
+        padding: 0 30px 20px 30px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .novelty-slider::-webkit-scrollbar { 
+        width: 0;
+        background: rgba(255, 255, 255, 0.0);
+    }
+    .pagination__arrow-prev,
+    .pagination__arrow-next {
+        display: none;
+    }
+    .novelty-slide {
+        position: relative;
+        opacity: 1;
+        transform: translate(0px, 0);
     }
 }
 
@@ -2560,9 +2617,10 @@ body.noscroll {
     }
     .menu__filter {
         position: absolute;
-        width: 120%;
+        width: calc(100% + 60px);
         margin-left: 0;
-        left: 0px;
+        padding-left: 30px;
+        left: -30px;
         top: 30px;
         overflow-x: scroll;
         scrollbar-width: none;
@@ -2703,14 +2761,7 @@ body.noscroll {
         max-width: 680px;
     }
 
-    .novelty-slider {
-        display: flex;
-        justify-content: flex-start;
-        gap: 20px;
-        width: 332px;
-        padding-bottom: 20px;
-        overflow-x: hidden;
-    }
+
     .basket__card {
         border-radius: 20px;
         height: 130px;
@@ -2789,7 +2840,7 @@ body.noscroll {
         margin: 20px 0 0 0;
       }
     .slider__slide {
-        width: 100%;
+        width: calc(100% +60px);
         flex-direction: column-reverse;
         min-width: 100%;
         display: flex;
@@ -2800,31 +2851,57 @@ body.noscroll {
         top: 0;
         left: none;
         opacity: 1;
+        transform: translate(0px,0px);
     }
     .slider__slide.active {
         left: 0;
         max-width: 100%;
         opacity: 1;
+        transform: translate(0px,0px);
+    }
+    .slider__slide.right {
+        left: 0;
+        max-width: 100%;
+        opacity: 1;
+        transform: translate(0px,0px);
     }
     .slider__container {
         max-height: 687px;
         min-height: 350px;
+        width: calc(100% + 60px);
         overflow-x: scroll;
         display: flex;
-        gap: 20px;
+        gap: 50px;
+        position: relative;
+        left: -30px;
+        padding: 0 30px;
     }
     .pagination__slide, .pagination__arrow {
         display: none;
     }
     .menu__container {
         margin-top: 30px;
+        position: relative;
+        min-height: 430px;
+      }
+      .menu__novelty {
+        width: calc(100% + 60px);
+        height: 370px;
+        overflow: hidden;
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
       }
     .novelty-slider {
         display: flex;
         justify-content: flex-start;
         gap: 20px;
-        width: 100%;
-        padding-bottom: 20px;
+        height: 400px;
+        width: calc(100% + 60px);
+        padding: 0 30px 20px 30px;
         overflow-x: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -2998,7 +3075,6 @@ body.noscroll {
         background-color: #FFFFFF;
         margin-left: 0;
         font-size: 16px;
-        border: 1px solid var(--color-light-grey);
     }
     .card-pizza .card-pizza_cart-btn.item-card__btn.active:hover {
         height: 26px;
@@ -3014,7 +3090,8 @@ body.noscroll {
         background-color: #FFFFFF;
         margin-left: 0;
         font-size: 16px;
-        border: 1px solid var(--color-light-grey);
+        border-left: 0;
+        border-right: 0;
     }
     .card-pizza .card-pizza_cart-btn.active .cart-btn__inc {
         display: none;
